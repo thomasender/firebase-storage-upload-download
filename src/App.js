@@ -39,6 +39,14 @@ function App() {
     );
   };
 
+  /**
+   *
+   * @param {string} url
+   * @returns {string} blobHref
+   *
+   * fetches a file then generates a new ObjectURl from the blob
+   * sets the blobHref that can be used with an anchor tag with attribute download
+   */
   const fetchFileAndReturnBlob = (url) => {
     if (!url) return;
     fetch(url)
